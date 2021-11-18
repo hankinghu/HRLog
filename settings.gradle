@@ -1,0 +1,4 @@
+include ':hrProcessor'
+include ':hrAnnotation'
+include ':app'
+rootProject.name = "HRLog"

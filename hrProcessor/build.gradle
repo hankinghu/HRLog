@@ -1,0 +1,13 @@
+apply plugin: 'java-library'
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation project(":hrAnnotation")
+    annotationProcessor 'com.google.auto.service:auto-service:1.0-rc6'
+    implementation 'com.google.auto.service:auto-service:1.0-rc6'
+
+    // 帮助我们通过类调用的方式来生成Java代码[JavaPoet]
+    implementation 'com.squareup:javapoet:1.13.0'
+}
+
+sourceCompatibility = "1.8"
+targetCompatibility = "1.8"
