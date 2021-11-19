@@ -1,3 +1,5 @@
+import org.gradle.internal.jvm.Jvm
+
 apply plugin: 'java-library'
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -7,6 +9,8 @@ dependencies {
 
     // 帮助我们通过类调用的方式来生成Java代码[JavaPoet]
     implementation 'com.squareup:javapoet:1.13.0'
+    implementation files(Jvm.current().toolsJar)
+
 }
 
 sourceCompatibility = "1.8"
